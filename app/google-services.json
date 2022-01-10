@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "62468971990",
+    "project_id": "netflex-8a0a6",
+    "storage_bucket": "netflex-8a0a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62468971990:android:6d95ea6799e6c3c3295877",
+        "android_client_info": {
+          "package_name": "com.example.netflex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62468971990-g030dukn4g3e1lb9jamsenqo0b6jhjm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC9I_Mb58UF4-xkb3-3aS3CyrzuBwprhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62468971990-8r6b6s9c92ie6vfrrr60m6om0dsd7apo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

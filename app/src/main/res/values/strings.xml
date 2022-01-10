@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Netflex</string>
+    <string name="Continue">Continue</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="default_web_client_ID">62468971990-g030dukn4g3e1lb9jamsenqo0b6jhjm7.apps.googleusercontent.com</string>
+
+    <string name="facebook_app_id">361982339066981</string>
+    <string name="fb_login_protocol_scheme">fb361982339066981</string>
+
+</resources>
