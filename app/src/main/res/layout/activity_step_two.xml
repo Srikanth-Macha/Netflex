@@ -75,6 +75,7 @@
             android:layout_marginHorizontal="35dp"
             android:inputType="textEmailAddress"
             android:text="E-Mail"
+            android:autofillHints="emailAddress"
             android:textColorHint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText

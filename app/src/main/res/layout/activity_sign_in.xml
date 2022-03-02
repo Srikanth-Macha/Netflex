@@ -32,6 +32,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/button_stroke"
                 android:hint="E-Mail"
+                android:autofillHints="emailAddress"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/white"
                 android:textSize="16sp" />

@@ -56,8 +56,7 @@ public class SwipeScreen extends AppCompatActivity {
             }
 
             @Override
-            public void onPageScrollStateChanged(int state) {
-            }
+            public void onPageScrollStateChanged(int state) {   }
         });
 
         //Method call to set OnClickListeners on required Views

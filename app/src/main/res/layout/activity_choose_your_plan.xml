@@ -32,7 +32,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Choose the plan that's right for you."
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -46,17 +46,16 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="280dp"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginVertical="20dp"
-                app:cardCornerRadius="15dp"
-
-                android:background="@color/white">
+                android:background="@color/white"
+                app:cardCornerRadius="15dp">
 
                 <ImageView
                     android:id="@+id/basicPlanImageID"
                     android:layout_width="wrap_content"
-                    android:layout_height="270dp"
+                    android:layout_height="wrap_content"
                     android:background="@color/white"
                     android:src="@drawable/basicplanimage" />
 
@@ -74,11 +73,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="210dp"
+                    android:layout_marginTop="15dp"
                     android:text="Rs.349/month"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginStart="210dp" />
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -87,9 +86,9 @@
                 android:layout_height="280dp"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginVertical="20dp"
-                app:cardCornerRadius="15dp"
+                android:background="@color/white"
                 android:elevation="50dp"
-                android:background="@color/white">
+                app:cardCornerRadius="15dp">
 
                 <ImageView
                     android:id="@+id/standardPlanImageID"
@@ -113,11 +112,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="210dp"
+                    android:layout_marginTop="20dp"
                     android:text="Rs.649/month"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="210dp" />
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -126,9 +125,9 @@
                 android:layout_height="280dp"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginVertical="20dp"
-                app:cardCornerRadius="15dp"
+                android:background="@color/white"
                 android:elevation="50dp"
-                android:background="@color/white">
+                app:cardCornerRadius="15dp">
 
                 <ImageView
                     android:id="@+id/premiumPlanImageID"
@@ -152,11 +151,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="210dp"
+                    android:layout_marginTop="20dp"
                     android:text="Rs.799/month"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="210dp" />
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -164,13 +163,13 @@
                 android:id="@+id/continuetoPayButtonID"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_marginVertical="30dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="30dp"
                 android:text="@string/Continue"
-                android:textSize="16sp"
-                android:textColor="@color/white"
                 android:textAllCaps="false"
-                android:layout_gravity="center_horizontal" />
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
