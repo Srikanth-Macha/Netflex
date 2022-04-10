@@ -360,6 +360,7 @@ public class SignInActivity extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         SignInButton signIn = findViewById(R.id.googleSignInButtonID);
+        signIn.setSize(SignInButton.SIZE_WIDE);
         signIn.setOnClickListener(v ->
                 signIn());
     }

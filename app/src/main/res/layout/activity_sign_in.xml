@@ -24,15 +24,16 @@
             android:inputType="textEmailAddress"
             android:text="E-Mail"
             android:textColorHint="#CACACA"
-            app:boxStrokeWidth="0dp">
+            app:boxStrokeWidth="0dp"
+            tools:ignore="HardcodedText">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailInputID"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:autofillHints="emailAddress"
                 android:background="@drawable/button_stroke"
                 android:hint="E-Mail"
-                android:autofillHints="emailAddress"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
@@ -67,25 +68,27 @@
 
         <Button
             android:id="@+id/signInButton"
-            android:layout_width="340dp"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="100dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/button_stroke"
             android:text="Sign In" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/googleSignInButtonID"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="100dp"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="100dp" />
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/fb_login_buttonID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:textSize="14sp" />
@@ -105,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="New to Netflix? Sign up now."
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
