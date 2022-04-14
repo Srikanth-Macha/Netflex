@@ -77,14 +77,6 @@ public class PaymentOverdue extends AppCompatActivity implements PaymentResultLi
 
         documentReference = fireStore.collection("Users").document(firebaseUserID);
 
-        documentReference.get().addOnSuccessListener((documentSnapshot) ->
-        {
-//            firebaseFirstName = documentSnapshot.getString("First_Name");
-//            firebaseLastName = documentSnapshot.getString("Last_Name");
-//
-//            firebaseContactNumber = documentSnapshot.getString("Contact_Number");
-        });
-
         try {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("name", firebaseFirstName + " " + firebaseLastName);
@@ -217,7 +209,7 @@ public class PaymentOverdue extends AppCompatActivity implements PaymentResultLi
 
                 Intent i = new Intent(PaymentOverdue.this, MainActivity.class);
                 startActivity(i);
-                finish();
+                finishAffinity();
             }
 
         }).addOnFailureListener(new OnFailureListener() {
