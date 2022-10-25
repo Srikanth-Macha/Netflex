@@ -4,7 +4,8 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="default_web_client_ID">62468971990-g030dukn4g3e1lb9jamsenqo0b6jhjm7.apps.googleusercontent.com</string>
 
-    <string name="facebook_app_id">361982339066981</string>
-    <string name="fb_login_protocol_scheme">fb361982339066981</string>
+    <string name="facebook_app_id">5408112439307496</string>
+    <string name="fb_login_protocol_scheme">fb5408112439307496</string>
+    <string name="facebook_client_token">bc057ac66008f0f7cd2ce098878adce8</string>
 
 </resources>

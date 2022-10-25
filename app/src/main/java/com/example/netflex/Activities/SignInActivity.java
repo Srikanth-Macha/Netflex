@@ -46,7 +46,6 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
@@ -78,7 +77,6 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-
 
         //Method call to assign values for Instance variables
         assignValues();
@@ -113,7 +111,6 @@ public class SignInActivity extends AppCompatActivity {
                         }
 
                         firebaseUserID = firebaseAuth.getCurrentUser().getUid();
-
                         userReference = fireStore.collection("Users").document(firebaseUserID);
 
                         userReference.get().addOnSuccessListener(documentSnapshot ->
@@ -216,7 +213,7 @@ public class SignInActivity extends AppCompatActivity {
                                 return;
                             }
 
-                            Toast.makeText(SignInActivity.this, "Failed to send reset link " + e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignInActivity.this, "Failed to send reset link " + e, Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -253,7 +250,7 @@ public class SignInActivity extends AppCompatActivity {
                 GraphRequest request = GraphRequest.newMeRequest(token,
                         (jsonObject, graphResponse) -> {
 
-                            if(jsonObject != null){
+                            if (jsonObject != null) {
                                 userEmail = jsonObject.optString("email");
                                 firebaseFirstName = jsonObject.optString("name");
                             }
@@ -324,26 +321,23 @@ public class SignInActivity extends AppCompatActivity {
 
             userReference = fireStore.collection("Users").document(id);
 
-            userReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                @Override
-                public void onSuccess(DocumentSnapshot documentSnapshot) {
-                    if (documentSnapshot.getDate("Valid_Date") != null) {
-                        startActivity(new Intent(SignInActivity.this, MainActivity.class));
-                    } else {
-                        Intent i = new Intent(SignInActivity.this, PaymentOverdue.class);
+            userReference.get().addOnSuccessListener(documentSnapshot -> {
+                if (documentSnapshot.getDate("Valid_Date") != null) {
+                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                } else {
+                    Intent i = new Intent(SignInActivity.this, PaymentOverdue.class);
 
-                        i.putExtra("Email", userEmail);
-                        i.putExtra("firebaseUserID", id);
-                        i.putExtra("firebaseFirstName", firebaseFirstName);
-                        i.putExtra("firebaseLastName", "");
-                        i.putExtra("firebaseContactNumber", "");
-                        i.putExtra("PlanExpired", false);
+                    i.putExtra("Email", userEmail);
+                    i.putExtra("firebaseUserID", id);
+                    i.putExtra("firebaseFirstName", firebaseFirstName);
+                    i.putExtra("firebaseLastName", "");
+                    i.putExtra("firebaseContactNumber", "");
+                    i.putExtra("PlanExpired", false);
 
-                        startActivity(i);
-                    }
-                    mGoogleSignInClient.signOut();
-                    finish();
+                    startActivity(i);
                 }
+                mGoogleSignInClient.signOut();
+                finish();
             });
 
         }
